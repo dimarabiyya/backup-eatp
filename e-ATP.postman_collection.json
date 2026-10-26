@@ -1,0 +1,696 @@
+<<<<<<< HEAD
+{
+	"variables": [],
+	"info": {
+		"name": "e-ATP",
+		"_postman_id": "4ad834ca-df73-7766-ad4a-c7e5da6c37b4",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"url": "139.0.12.89/e-atp/mobile/login_eatp",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "data",
+							"value": "{\"usri\":\"mobile3\",\"usrp\":\"12345678\"}",
+							"type": "text",
+							"enabled": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "HS Auth",
+			"request": {
+				"url": "119.110.87.74/e-atp/mobile/hsAuth",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "data",
+							"value": "{\"userId\":\"anu\",\"password\":\"12345678\"}",
+							"type": "text",
+							"enabled": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Logout",
+			"request": {
+				"url": "139.0.12.89/e-atp/mobile/logout_eatp",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "data",
+							"value": "{\"usri\":\"mobile3\"}",
+							"type": "text",
+							"enabled": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get Schedule",
+			"request": {
+				"url": "eatp.alita.id/mobile/get_schedule",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "data",
+							"value": "{\"token\":\"1a48de206b445da1f608649475e8caee8794f7e3\"}",
+							"type": "text",
+							"enabled": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Add Summary",
+			"request": {
+				"url": "119.110.87.74/e-atp/mobile/add_summary",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "data",
+							"value": "{\"visit_id\":1,\"acceptance_status\":1,\"remark\":\"\",\"token\":\"get_schedule\"}",
+							"type": "text",
+							"enabled": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Add Pending Item",
+			"request": {
+				"url": "119.110.87.74/e-atp/mobile/add_pending_item",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "data",
+							"value": "{\"visit_id\":1,\"item_no\":123,\"item_descr\":\"test\",\"target_completion\":\"x\",\"pic\":\"\",\"contact_no\":\"777777\",\"token\":\"\"}",
+							"type": "text",
+							"enabled": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Add Sign",
+			"request": {
+				"url": "119.110.87.74/e-atp/mobile/add_sign",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "data",
+							"value": "{\"visit_id\":55,\"contact_no\":\"999\",\"sign_type\":2,\"lat\":6.1234,\"lon\":-6.1234,\"token\":\"b64b8e6303b4bc0cfd04434a915b0e3ce2bd19cf\"}",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "file",
+							"type": "file",
+							"enabled": true,
+							"src": "vlcsnap-2016-10-19-13h45m31s168.jpg",
+							"value": ""
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Add FOP Photo",
+			"request": {
+				"url": "119.110.87.74/e-atp/mobile/add_fop_photo",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "data",
+							"value": "{\"visit_id\":123,\"lat\":6.1234,\"lon\":-6.1234,\"token\":\"\"}",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "file",
+							"type": "file",
+							"enabled": true,
+							"src": "image.jpg",
+							"value": ""
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Confirm - No",
+			"request": {
+				"url": "eatp.alita.id/mobile/addsiteconfirmno",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "data",
+							"value": "{\"jc_id\":\"1\",\"group_value\":\"1\",\"desc\":\"test\",\"token\":\"1a48de206b445da1f608649475e8caee8794f7e3\"}",
+							"type": "text",
+							"enabled": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Confirm - Yes",
+			"request": {
+				"url": "139.0.12.89/e-atp/mobile/addsiteconfirmyes",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "data",
+							"value": "{\"jc_id\":57,\"token\":\"d14096e08b911bd77cfee26bcf4fdce722c02a1f\"}",
+							"type": "text",
+							"enabled": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Update Quatity Actual",
+			"request": {
+				"url": "119.110.87.74/e-atp/mobile/updateQuatityActual",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "data",
+							"value": "{\"bomId\":1,\"qtyActual\":10,\"token\":\"4d83b4c3c58e259d726401e791969afc91734d34\"}",
+							"type": "text",
+							"enabled": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get Link BoM",
+			"request": {
+				"url": "119.110.87.74/e-atp/mobile/get_link_bom",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "data",
+							"value": "{\"visit_id\":\"3\",\"token\":\"baccd93ea1a150a44902aab897e0e9d56b25155e\"}",
+							"type": "text",
+							"enabled": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Save Checklist",
+			"request": {
+				"url": "119.110.87.74/e-atp/mobile/saveChecklist",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "data",
+							"value": "{\"visit_id\":4,\"checklist_id\":1234,\"result\":\"\",\"bobot\":10,\"latitude\":6.1234,\"longitude\":-6.1234,\"photo_remark\":\"\",\"token\":\"67a7db819cc0f37c1078aed3d162072281085904\"}",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "file",
+							"type": "file",
+							"enabled": true,
+							"src": "aikido_black_belt.jpg",
+							"value": ""
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Check In",
+			"request": {
+				"url": "eatp.alita.id/mobile/addcoordinatcheckin",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "data",
+							"value": "{\"token\":\"1a48de206b445da1f608649475e8caee8794f7e3\"}",
+							"type": "text",
+							"enabled": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Check Out",
+			"request": {
+				"url": "eatp.alita.id/mobile/addcoordinatcheckout",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "data",
+							"value": "{\"token\":\"1a48de206b445da1f608649475e8caee8794f7e3\"}",
+							"type": "text",
+							"enabled": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+=======
+{
+	"variables": [],
+	"info": {
+		"name": "e-ATP",
+		"_postman_id": "4ad834ca-df73-7766-ad4a-c7e5da6c37b4",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"url": "139.0.12.89/e-atp/mobile/login_eatp",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "data",
+							"value": "{\"usri\":\"pic_1_2\",\"usrp\":\"12345678\"}",
+							"type": "text",
+							"enabled": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "HS Auth",
+			"request": {
+				"url": "119.110.87.74/e-atp/mobile/hsAuth",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "data",
+							"value": "{\"userId\":\"anu\",\"password\":\"12345678\"}",
+							"type": "text",
+							"enabled": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Logout",
+			"request": {
+				"url": "139.0.12.89/e-atp/mobile/logout_eatp",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "data",
+							"value": "{\"usri\":\"mobile3\"}",
+							"type": "text",
+							"enabled": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get Schedule",
+			"request": {
+				"url": "eatp.alita.id/mobile/get_schedule",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "data",
+							"value": "{\"token\":\"1a48de206b445da1f608649475e8caee8794f7e3\"}",
+							"type": "text",
+							"enabled": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Add Summary",
+			"request": {
+				"url": "119.110.87.74/e-atp/mobile/add_summary",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "data",
+							"value": "{\"visit_id\":1,\"acceptance_status\":1,\"remark\":\"\",\"token\":\"get_schedule\"}",
+							"type": "text",
+							"enabled": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Add Pending Item",
+			"request": {
+				"url": "119.110.87.74/e-atp/mobile/add_pending_item",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "data",
+							"value": "{\"visit_id\":1,\"item_no\":123,\"item_descr\":\"test\",\"target_completion\":\"x\",\"pic\":\"\",\"contact_no\":\"777777\",\"token\":\"\"}",
+							"type": "text",
+							"enabled": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Add Sign",
+			"request": {
+				"url": "119.110.87.74/e-atp/mobile/add_sign",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "data",
+							"value": "{\"visit_id\":55,\"contact_no\":\"999\",\"sign_type\":2,\"lat\":6.1234,\"lon\":-6.1234,\"token\":\"b64b8e6303b4bc0cfd04434a915b0e3ce2bd19cf\"}",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "file",
+							"type": "file",
+							"enabled": true,
+							"src": "vlcsnap-2016-10-19-13h45m31s168.jpg",
+							"value": ""
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Add FOP Photo",
+			"request": {
+				"url": "119.110.87.74/e-atp/mobile/add_fop_photo",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "data",
+							"value": "{\"visit_id\":123,\"lat\":6.1234,\"lon\":-6.1234,\"token\":\"\"}",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "file",
+							"type": "file",
+							"enabled": true,
+							"src": "image.jpg",
+							"value": ""
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Confirm - No",
+			"request": {
+				"url": "eatp.alita.id/mobile/addsiteconfirmno",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "data",
+							"value": "{\"jc_id\":\"1\",\"group_value\":\"1\",\"desc\":\"test\",\"token\":\"1a48de206b445da1f608649475e8caee8794f7e3\"}",
+							"type": "text",
+							"enabled": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Confirm - Yes",
+			"request": {
+				"url": "139.0.12.89/e-atp/mobile/addsiteconfirmyes",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "data",
+							"value": "{\"jc_id\":57,\"token\":\"d14096e08b911bd77cfee26bcf4fdce722c02a1f\"}",
+							"type": "text",
+							"enabled": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Update Quatity Actual",
+			"request": {
+				"url": "119.110.87.74/e-atp/mobile/updateQuatityActual",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "data",
+							"value": "{\"bomId\":1,\"qtyActual\":10,\"token\":\"4d83b4c3c58e259d726401e791969afc91734d34\"}",
+							"type": "text",
+							"enabled": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get Link BoM",
+			"request": {
+				"url": "119.110.87.74/e-atp/mobile/get_link_bom",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "data",
+							"value": "{\"visit_id\":\"3\",\"token\":\"baccd93ea1a150a44902aab897e0e9d56b25155e\"}",
+							"type": "text",
+							"enabled": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Save Checklist",
+			"request": {
+				"url": "119.110.87.74/e-atp/mobile/saveChecklist",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "data",
+							"value": "{\"visit_id\":4,\"checklist_id\":1234,\"result\":\"\",\"bobot\":10,\"latitude\":6.1234,\"longitude\":-6.1234,\"photo_remark\":\"\",\"token\":\"67a7db819cc0f37c1078aed3d162072281085904\"}",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "file",
+							"type": "file",
+							"enabled": true,
+							"src": "aikido_black_belt.jpg",
+							"value": ""
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Check In",
+			"request": {
+				"url": "eatp.alita.id/mobile/addcoordinatcheckin",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "data",
+							"value": "{\"token\":\"1a48de206b445da1f608649475e8caee8794f7e3\"}",
+							"type": "text",
+							"enabled": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Check Out",
+			"request": {
+				"url": "eatp.alita.id/mobile/addcoordinatcheckout",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "data",
+							"value": "{\"jc_id\":8,\"lat\":-6.1234,\"lon\":6.1234,\"user_id\":\"pic_1_2\",\"token\":\"2aa3f9ca86fb6c924bfae11aab77dd8577b8f788\"}",
+							"type": "text",
+							"enabled": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+>>>>>>> 7b59dd6d3d8e570ad964d970c494327250b33e4e
+}

@@ -1,0 +1,144 @@
+.btn-primary,
+.navbar.main,
+.navbar.main .btn-navbar,
+#flotTip,
+.btn-group.open .btn-primary.dropdown-toggle,
+.btn-primary.disabled,
+.btn-primary[disabled],
+.btn-primary:hover,
+#menu > ul > li.active > a,
+.label-primary,
+.table-primary thead th,
+.pagination ul > .active > a,
+.pagination ul > .active > span,
+.gallery ul li .thumb,
+.widget-activity ul.filters li.glyphicons.active i,
+.ui-slider-wrap .slider-primary .ui-slider-range,
+.ui-widget-header,
+.ui-state-active,
+.ui-widget-content .ui-state-active,
+.ui-widget-header .ui-state-active,
+.fc-event-skin,
+#external-events li,
+.notyfy_wrapper.notyfy_primary,
+.progress.progress-primary .bar,
+.alert.alert-primary,
+.pagination ul > li > a:hover,
+.pagination ul > li.primary > a {
+  background: #c00505;
+}
+.accordion-heading .accordion-toggle{
+  background:#DADADA; 
+}
+p a,
+.breadcrumb .glyphicons i:before,
+.widget .widget-body.list ul li .count,
+.breadcrumb .glyphicons i:before,
+.breadcrumb .glyphicons,
+.breadcrumb a,
+.widget-stats .txt strong,
+.widget-activity ul.activities li.highlight .activity-icon i:before,
+.glyphicons.single i:before,
+.glyphicons.single,
+.table-primary tbody td.important,
+.widget.widget-3 .widget-body.large.cancellations span span:first-child,
+.widget .widget-footer a:hover,
+.widget .widget-footer a:hover i:before,
+.widget.widget-3 .widget-footer a:hover,
+.widget.widget-3 .widget-footer a:hover i:before,
+blockquote small,
+#menu .profile span a {
+  color: #c00505;
+}
+.linkblue a:link{
+  color: #0000FF;
+}
+.linkblue a:visited{
+  color: #800080;
+}
+.linkblue a:hover{
+  color: #FF0000;
+}
+.btn-primary,
+.ui-slider-wrap .slider-primary .ui-slider-handle,
+#flotTip,
+.widget.widget-2.primary .widget-head,
+.widget .widget-body.list.list-2 ul li.active a i:before,
+.table-primary thead th,
+.pagination ul > .active > a,
+.pagination ul > .active > span,
+.widget.widget-4 .widget-head .heading,
+.ui-widget-header,
+.fc-event-skin,
+.alert.alert-primary,
+.pagination ul > li > a:hover,
+.pagination ul > li.primary > a {
+  border-color: #c00505;
+}
+.table-primary tbody td {
+  background-color: #EEEEEE;
+}
+.table-primary tbody tr.selected td,
+.table-primary tbody tr.selectable:hover td {
+  background-color: #FAF896;
+}
+.table-primary.table-bordered tbody td,
+.table-primary,
+.pagination ul > .disabled > a,
+.pagination ul > .disabled > span {
+  border-color: #EEEEEE;
+}
+.navbar.main .appbrand {
+  background: #8e0404;
+  border-color: #f20606;
+}
+.navbar.main .appbrand span {
+  border-color: #750303;
+}
+.navbar.main .btn-navbar .icon-bar {
+  background: #fa3131;
+}
+.navbar.main .topnav {
+  border-color: #750303;
+}
+.navbar.main .topnav > li {
+  border-right-color: #750303;
+  border-left-color: #f91919;
+}
+.navbar.main .btn-navbar {
+  border-right-color: #750303;
+}
+#menu > ul > li.active {
+  border-top-color: #8e0404;
+}
+#menu > ul > li.active > a {
+  border-bottom-color: #8e0404;
+  border-top-color: #f20606;
+}
+.navbar.main .topnav > li > a.glyphicons i:before,
+.navbar.main .topnav > li .notif li > a.glyphicons i:before,
+.navbar.main .topnav > li > a,
+.navbar.main .topnav > li .notif li > a {
+  color: #FACFCF;
+}
+#menu > ul > li.active .count {
+  background: #5d0202;
+}
+.widget-activity ul.activities li.highlight {
+  background-color: rgba(192, 5, 5, 0.1);
+  border-color: rgba(192, 5, 5, 0.2);
+}
+.widget-activity ul.activities li.highlight .activity-icon {
+  border-color: rgba(192, 5, 5, 0.2);
+}
+.widget .widget-body.list.list-2 ul li.active {
+  border-color: #fa3131;
+}
+.widget .widget-body.list.list-2 ul li a {
+  color: #fa3131;
+}
+.widget .widget-body.list.list-2 ul li a i:before {
+  background: #EEEEEE;
+  color: #f20606;
+  border-color: #fa3131;
+}

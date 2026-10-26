@@ -1,0 +1,4 @@
+table#pm-schedule tr td.pm:hover {
+  cursor: pointer;
+  background-color: #fffca5;
+}
