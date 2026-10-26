@@ -1,0 +1,51 @@
+<style>
+
+	table .heading-title{
+		font-weight: 700;
+	}
+</style>
+<div class="widget">
+	<div class="widget-head heading-outer">
+		<h4 class="heading glyphicons list"><i></i> Detail {{dataPo.po_no}}</h4>
+	</div>
+	
+	<div class="widget-body">
+		<table class="table table-striped" id="table_detail">
+			<tr>
+				<td class="heading-title">PO No.</td>
+				<td>{{dataPo.po_no}}</td>
+			</tr>
+			<tr>
+				<td class="heading-title">PO Date.</td>
+				<td>{{dataPo.po_date}} </td>
+			</tr>
+			<tr>
+				<td class="heading-title">Region</td>
+				<td>{{dataPo.region}} </td>
+			</tr>		
+		</table>
+		<hr/>
+		<h5>Links Connected</h5>
+		<table class="table table-striped table-bordered" id="table_detail">
+			<tr>
+				<th>Link</th>
+				<th>Site NE</th>
+				<th>Site FE</th>
+				<th>EWO/NBWO</th>
+				<th>Type</th>
+				<th>Description</th>
+				<th>Progress</th>
+			</tr>
+			<tr ng-repeat="link in dataPo.links">
+				<td>{{link.link_id}}</td>
+				<td>{{link.site_name_ne}}</td>
+				<td>{{link.site_name_fe}}</td>
+				<td>{{link.ewo_no}}</td>
+				<td>{{link.po_type}}</td>
+				<td>{{link.po_description}}</td>
+				<td>{{link.progress}}</td>
+			</tr>
+		</table>
+	</div>
+
+</div>

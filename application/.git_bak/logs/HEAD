@@ -1,0 +1,16 @@
+0000000000000000000000000000000000000000 264019fbeb3072f65e6d430534b73418103ec8ca Rioagusto1808 <alhadivnr@gmail.com> 1790737036 -0700	commit (initial): Initial commit
+264019fbeb3072f65e6d430534b73418103ec8ca ecc85a263f4b8d5ccebda2abb39ab8b058eabda1 Rioagusto1808 <alhadivnr@gmail.com> 1790740643 -0700	checkout: moving from main to refactor/security-cleanup
+ecc85a263f4b8d5ccebda2abb39ab8b058eabda1 6521d0e84da58097711bf058baa3b1b4aa760cd6 Rioagusto1808 <alhadivnr@gmail.com> 1790741356 -0700	pull: Fast-forward
+6521d0e84da58097711bf058baa3b1b4aa760cd6 91e72e350161c9159aeb459051c572979ab7be12 Rioagusto1808 <alhadivnr@gmail.com> 1790748730 -0700	pull: Fast-forward
+91e72e350161c9159aeb459051c572979ab7be12 91e72e350161c9159aeb459051c572979ab7be12 Rioagusto1808 <alhadivnr@gmail.com> 1790749035 -0700	checkout: moving from refactor/security-cleanup to refactor/security-cleanup
+91e72e350161c9159aeb459051c572979ab7be12 c7f6e94026d3f6312d33bcdbbeff4626bb324ff9 Rioagusto1808 <alhadivnr@gmail.com> 1790749059 -0700	pull: Fast-forward
+c7f6e94026d3f6312d33bcdbbeff4626bb324ff9 4480250bab729cd96e564e52686d5cff183523f3 Rioagusto1808 <alhadivnr@gmail.com> 1790749275 -0700	pull: Fast-forward
+4480250bab729cd96e564e52686d5cff183523f3 c277587384d0c2898bf207d33431f9c51033d167 Rioagusto1808 <alhadivnr@gmail.com> 1790749626 -0700	pull: Fast-forward
+c277587384d0c2898bf207d33431f9c51033d167 91e7b39e975fb9dd3147c81c1373d73ee74344f2 Rioagusto1808 <alhadivnr@gmail.com> 1790750840 -0700	pull: Fast-forward
+91e7b39e975fb9dd3147c81c1373d73ee74344f2 d7e816d6ef59d48dbfa2854dd5dc9e0dc6afa311 Rioagusto1808 <alhadivnr@gmail.com> 1790758791 -0700	pull: Fast-forward
+d7e816d6ef59d48dbfa2854dd5dc9e0dc6afa311 58b4abd6e5c8009da57085632b024e11a3742ef9 Rioagusto1808 <alhadivnr@gmail.com> 1790761081 -0700	pull: Fast-forward
+58b4abd6e5c8009da57085632b024e11a3742ef9 ee7ee48df94a8b42bd7a4382aa7c06d4d8c7c12d Rioagusto1808 <alhadivnr@gmail.com> 1790761775 -0700	pull: Fast-forward
+ee7ee48df94a8b42bd7a4382aa7c06d4d8c7c12d 611ab81192ad4413073c6cd907fbc15ce0ff98f0 Rioagusto1808 <alhadivnr@gmail.com> 1790761993 -0700	pull: Fast-forward
+611ab81192ad4413073c6cd907fbc15ce0ff98f0 0997763a3bdb83981dbbc9bab390e191c5a02407 Rioagusto1808 <alhadivnr@gmail.com> 1790762692 -0700	pull: Fast-forward
+0997763a3bdb83981dbbc9bab390e191c5a02407 154b9dd2158a759938c3b519c27d8bf680677954 Rioagusto1808 <alhadivnr@gmail.com> 1790917833 -0700	pull: Fast-forward
+154b9dd2158a759938c3b519c27d8bf680677954 ce0178baa8c14c208b6d579ed19903c055717b3a Rioagusto1808 <alhadivnr@gmail.com> 1792041933 -0700	commit: fix: perbaiki pic_id dan pm_desktop_by visit 50159 ke user_id budi.hartono

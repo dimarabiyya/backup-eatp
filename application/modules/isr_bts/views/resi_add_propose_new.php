@@ -1,0 +1,149 @@
+<div class="innerLR">
+  <div class="widget">
+    <div class="widget-head heading-outer">
+      <h1 class="heading glyphicons notes_2"><i></i> Add Propose New</h1>
+      <a href="<?php echo base_url('isr_bts/resi'); ?>" class="btn btn-mini btn-heading btn-primary btn-icon glyphicons unshare pull-right"><i></i><span>Back</span></a>
+    </div>
+    <form id="ff" action="" method="post" class="form-horizontal">
+      <div class="widget-body">
+        <div class="row-fluid">
+          <div class="span5">
+            <div class="control-group">
+              <label class="control-label">Resi No <span class="text-error">*</span> : </label>
+              <div class="controls"><input class="span12" id="app_no" name="app_no" type="text" value="" autofocus=""></div>
+            </div>
+            <div class="control-group">
+              <label class="control-label">Resi Issued <span class="text-error">*</span> : </label>
+              <div class="controls">
+                <div class="input-append">
+                  <input class="datepicker" id="app_issued" name="app_issued" type="text" value="" readonly="">
+                  <span class="add-on glyphicons calendar"><i></i></span>
+                </div>
+              </div>
+            </div>
+            <div class="control-group">
+              <label class="control-label">Document : </label>
+              <div class="controls"><input class="span12" type="file" id="doc" name="doc"></div>
+            </div>
+            <div class="control-group">
+              <label class="control-label">Remark : </label>
+              <div class="controls"><input class="span12" type="text" id="remark" name="remark"></div>
+            </div>
+          </div>
+          <div class="span2">
+            <button type="button" class="btn" onclick="lookupLink()">Add Station</button>
+          </div>
+        </div>
+        <div class="row-fluid" style="margin-top: 10px">
+          <div style="width: 100%; overflow: auto">
+            <table id="bts_table" class="table table-striped table-bordered table-condensed" style="width: 4000px">
+              <thead>
+                <tr>
+                  <th>Service ID</th>
+                  <th>Subservice ID</th>
+                  <th>Client ID</th>
+                  <th>Application ID</th>
+                  <th>Station ID</th>
+                  <th>Link ID</th>
+                  <th>Station Name</th>
+                  <th>Height ASL</th>
+                  <th>Lat / Long</th>
+                  <th>Radius of Operation</th>
+                  <th>Site Province</th>
+                  <th>Site City</th>
+                  <th>Site District</th>
+                  <th>Area of Service</th>
+                  <th>Equipment Type</th>
+                  <th>Equipment Output Power</th>
+                  <th>Bandwidth</th>
+                  <th>Tx Freq</th>
+                  <th>Rx Freq</th>
+                  <th>Antenna Type</th>
+                  <th>Feeding Loss</th>
+                  <th>Connector Loss</th>
+                  <th>Branch Loss</th>
+                  <th>Antenna Height AGL</th>
+                  <th>Transmitter Polatization</th>
+                </tr>
+              </thead>
+              <tbody id="table_data">
+
+              </tbody>
+            </table>
+          </div>
+          <div class="form-actions">
+            <button type="submit" class="btn btn-icon btn-primary glyphicons ok_2"><i></i>Save</button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+<script src="<?php echo base_url('assets/js/hehehe.js'); ?>"></script>
+<script>
+              function lookupLink() {
+                $.fancybox({
+                  href: "<?php echo base_url('isr_bts/resi/lookup_bts'); ?>",
+                  type: 'ajax',
+                  minWidth: 1200,
+                  scrolling: false,
+                  autoSize: true,
+                  autoCenter: false,
+                  fitToView: true,
+                  closeClick: false,
+                  topRatio: 0,
+                  afterShow: function() {
+                    $('#app_no').focus();
+                  }
+                });
+              }
+
+              $(document).ready(function() {
+                $(".datepicker").datepicker({
+                  dateFormat: "dd M yy",
+                  changeMonth: true,
+                  numberOfMonths: 1,
+                  changeYear: true
+                });
+
+                $("#ff").validate({
+                  rules: {
+                    app_no: "required",
+                    app_issued: "required",
+                  },
+                  messages: {
+                    app_no: "Please enter Resi number",
+                    app_issued: "Please enter issued date",
+                  },
+                  submitHandler: function(form) {
+                    var formData = new FormData($('#ff')[0]);
+                    $.ajax({
+                      url: $('#ff').attr('action'),
+                      data: formData,
+                      type: 'post',
+                      dataType: 'json',
+                      contentType: false,
+                      processData: false,
+                      cache: false,
+                      beforeSend: function() {
+                        block.show('Saving');
+                      },
+                      success: function(response) {
+                        coolNotification('<h3>' + response.status.toUpperCase() + '</h3>' + response.message, response.status, function() {
+                          if (response.status == 'success') {
+                            window.location.href = '<?php echo base_url('isr_bts/resi'); ?>';
+                          }
+                        });
+                      },
+                      error: function(xhr, status, message) {
+                        coolNotification('<h3>Error!</h3> Please contact the Administrator.', 'error');
+                      },
+                      complete: function() {
+                        block.close()
+                      }
+                    });
+                  }
+                });
+              });
+</script>

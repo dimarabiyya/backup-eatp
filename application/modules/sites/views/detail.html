@@ -1,0 +1,44 @@
+<style>
+
+	table .heading-title{
+		font-weight: 700;
+	}
+</style>
+<div class="widget">
+	<div class="widget-head heading-outer">
+		<h4 class="heading glyphicons list"><i></i> Site : {{dataSite.site_name}}</h4>
+	</div>
+
+	<div class="widget-body">
+		<table class="table table-striped" id="table_detail">
+			<tr>
+				<td class="heading-title">Site Name</td>
+				<td>{{dataSite.site_name}}</td>
+			</tr>
+			<tr>
+				<td class="heading-title">Location</td>
+				<td>{{dataSite.latitude}} , {{dataSite.longitude}}</td>
+			</tr>
+			<tr>
+				<td class="heading-title">Region</td>
+				<td>{{dataSite.region}} </td>
+			</tr>
+			<tr>
+				<td class="heading-title">Area</td>
+				<td>{{dataSite.area}} </td>
+			</tr>
+			<tr>
+				<td class="heading-title">Location Id</td>
+				<td>{{dataSite.location_id}} </td>
+			</tr>
+			<tr>
+				<td class="heading-title">Address</td>
+				<td>{{dataSite.site_address}} </td>
+			</tr>
+			<tr>
+				<td class="heading-title">Type</td>
+				<td>{{dataSite.s_type}} </td>
+			</tr>
+		</table>
+	</div>
+</div>

@@ -1,0 +1,8 @@
+fix: perbaiki pic_id dan pm_desktop_by visit 50159 ke user_id budi.hartono
+
+- visit_id 50159 menyimpan email 'bdihrt96@gmail.com' di kolom pic_id
+  dan pm_desktop_by, seharusnya menyimpan user_id 'budi.hartono'
+- Tambah SQL fix file sebagai dokumentasi perubahan data
+- User: Budi Hartono (user_id=budi.hartono, email=bdihrt96@gmail.com)
+- Tidak ada FK constraint pada kolom tersebut, update aman dilakukan
+- Data diupdate langsung ke DB production dengan transaksi + verifikasi

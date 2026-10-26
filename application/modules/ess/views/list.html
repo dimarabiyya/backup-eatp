@@ -1,0 +1,42 @@
+<div class="widget" id="essList">
+	<div class="widget-head heading-outer">
+		<h4 class="heading glyphicons list"><i></i> {{ title }}</h4>
+		
+		<div class="btn-heading-group">
+			<a href="#/add" class="btn btn-primary btn-mini btn-heading btn-icon glyphicons circle_plus pull-right"><i></i> Add New</a>
+			<!--
+			<a href="javascript:;" class="btn btn-success btn-mini btn-heading btn-icon glyphicons inbox_in pull-right"><i></i> Import</a>
+			<a href="{{ exportESS }}" class="btn btn-warning btn-mini btn-heading btn-icon glyphicons inbox_out pull-right"><i></i> Export</a>
+			-->
+		</div>
+	</div>
+	
+	<div class="widget-body">
+		<div id="tbPo" style="padding: 3px 0px 0px 0px; height:auto">
+			<div class="row-fluid">
+				<div class="span6">
+					<div class="span12">
+						<div class="input-prepend">
+							<span class="add-on">Region</span>
+							<select id="regions" >
+								<option value="">All</option>
+								<option ng-repeat="(i, v) in regions" value="{{ i }}">{{ v }}</option>
+
+							</select>
+						</div>
+					</div>						
+				</div>
+				<div class="span6">
+					<div class="col-md-6 pull-right">
+						<div class="input-append pull-right">
+							<input type="text" id="query" class="input-medium" placeholder="Search..." ng-model="searchText" />
+							<button class="btn" ng-click="search()" >Search</button>
+						</div>
+					</div>
+				</div>		
+			</div>
+		</div>
+		
+		<table class="jgrid" id="gridEss"></table>
+	</div>
+</div>

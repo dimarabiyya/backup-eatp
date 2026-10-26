@@ -1,0 +1,29 @@
+diff a/application/modules/po/controllers/po.php b/application/modules/po/controllers/po.php	(rejected hunks)
+@@ -90,16 +90,19 @@
+ 				$po_id = $this->po_model->insert($post);  
+ 				$message = "Data updated successfully.";
+ 				/*Iterate PO LINK*/
+-				for($i=0;$i<count($this->input->post("sitene"));$i++){
+-					
+-					if(empty($this->input->post("sitene")[$i]) || empty($this->input->post("sitefe")[$i]) ){
+-							$message = "Missing Link when you udpate data";
+-					}else{
++				for($i = 0; $i<count($this->input->post("sitene")); $i++)
++				{
++					if (empty($this->input->post['sitene'][$i]) || empty($this->input->post['sitefe'][$i]))
++					{
++						$message = "Missing Link when you udpate data";
++					}
++					else
++					{
+ 						/*Save Each Site Link*/
+ 						$post_site =  new stdClass;
+-						$post_site->site_id_ne  =  $this->input->post("sitene")[$i];
+-						$post_site->site_id_fe  = $this->input->post("sitefe")[$i];
+-						$post_site->link_id  =  $this->input->post("sitene")[$i]."<>".$this->input->post("sitefe")[$i];
++						$post_site->site_id_ne  =  $this->input->post['sitene'][$i];
++						$post_site->site_id_fe  = $this->input->post['sitefe'][$i];
++						$post_site->link_id  =  $this->input->post['sitene'][$i]."<>".$this->input->post['sitefe'][$i];
+ 						$post_site->ant_model = "-"; 
+ 						$post_site->created_on = date('Y-m-d H:i:s');
+ 						$post_site->created_by = $this->session->userdata('user_id');

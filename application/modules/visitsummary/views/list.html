@@ -1,0 +1,110 @@
+<style>
+.pointer{
+	cursor: pointer;
+}
+</style>
+<div class="innerLR">
+	<div class="widget widget-tabs">
+		<div class="widget-head">
+			<ul>
+				<li class="active" id="tab-visited"><a class="glyphicons circle_ok pointer" ng-click="getVisitedSummary()" ><i></i>Visited Summary</a></li>
+				<li class="" id="tab-unvisited"><a class="glyphicons circle_info pointer" ng-click="getUnVisitedSummary()" ><i></i>Unvisited Summary</a></li>
+			</ul>
+		</div>
+
+		<div class="widget-body">
+			<div class="tab-content">
+				<div class="tab-pane active" id="widget-visited">
+					<div id="toolBar3" style="padding: 10px 10px 0 10px; height:auto">
+							<a href="<?php echo site_url('visitsummary/print_all_excel/3') ?>" class="btn btn-success"> Print </a>
+
+						 <br>
+						 &nbsp;
+						 <br>
+						 &nbsp;
+						<div class="input-prepend">
+							<span class="add-on">Region</span>
+							<select name="filter_region" >
+								<option ng-repeat="(i, v) in regions" value="{{ i }}">{{ v }}</option>
+							</select>
+						</div>
+						<div class="input-prepend">
+							<span class="add-on">Date From</span>
+							<input type="text" name="date_from" class="input-small date" placeholder="DD-MMM-YYYY" />
+						</div>
+						<div class="input-prepend">
+							<span class="add-on">Date To</span>
+							<input type="text" name="date_to" class="input-small date" placeholder="DD-MMM-YYYY" />
+						</div>
+						<div class="input-prepend">
+							<span class="add-on">Status PIC</span>
+							<select name="filter_fsp" >
+							<option value="">--Pilih--</option>
+								<option value="not_yet">Not Yet</option>
+								<option value="pass">Pass</option>
+								<option value="reject">Reject</option>
+							</select>
+						</div>
+						<div class="input-prepend">
+							<input type="text" name="search_b" class="input" placeholder="PIC/Site/Visit ID" />
+						</div>
+
+						<button class="btn" ng-click="filterVisitSummary()" style="margin-bottom: 10px">Search</button>
+						<!--
+						<div class="input-append pull-right">
+							<input name="searchbox" type="text" placeholder="PIC Name / Site LINK" "/>
+							<button class="btn" ng-click="searchVisitSummary()" >Search</button>
+						</div>-->
+					</div>
+					<table class="jgrid" id="gridVisitedSchedule"></table>
+				</div>
+
+
+				<div class="tab-pane" id="widget-unvisited">
+					<div id="toolBar1" style="padding: 10px 10px 0 10px; height:auto">
+							<a href="<?php echo site_url('visitsummary/print_all_excel/0') ?>" class="btn btn-success"> Print </a>
+							<br>
+ 						 &nbsp;
+ 						 <br>
+ 						 &nbsp;
+						<div class="input-prepend">
+							<span class="add-on">Region</span>
+							<select name="filter_region" >
+								<option ng-repeat="(i, v) in regions" value="{{ i }}">{{ v }}</option>
+							</select>
+						</div>
+						<div class="input-prepend">
+							<span class="add-on">Date From</span>
+							<input type="text" name="date_from" class="input-small date" placeholder="DD-MMM-YYYY" />
+						</div>
+						<div class="input-prepend">
+							<span class="add-on">Date To</span>
+							<input type="text" name="date_to" class="input-small date" placeholder="DD-MMM-YYYY" />
+						</div>
+						<div class="input-prepend">
+							<span class="add-on">Status PIC</span>
+							<select name="filter_fsp" >
+								<option value="">--Pilih--</option>
+								<option value="not_yet">Not Yet</option>
+								<option value="pass">Pass</option>
+								<option value="reject">Reject</option>
+							</select>
+						</div>
+						<div class="input-prepend">
+							<input type="text" name="search_b" class="input" placeholder="PIC Name / Site LINK" />
+						</div>
+
+						<button class="btn" ng-click="filterUnVisitSummary()" style="margin-bottom: 10px">Search</button>
+						<!--<div class="input-append pull-right">
+							<input name="searchbox" type="text" placeholder="PIC Name / Site LINK" "/>
+							<button class="btn" ng-click="searchUnVisitSummary()" >Search</button>
+						</div>-->
+					</div>
+					<table class="jgrid" id="gridUnVisitedSchedule"></table>
+				</div>
+
+
+			</div>
+		</div>
+	</div>
+</div>

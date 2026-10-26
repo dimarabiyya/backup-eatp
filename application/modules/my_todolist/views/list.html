@@ -1,0 +1,81 @@
+<div class="widget" id="approvalList">
+	<div class="widget-head heading-outer">
+		<h4 class="heading glyphicons list"><i></i> {{ title }}</h4>
+		
+		 
+	</div>
+	
+	<div class="widget-body">
+		<div id="tbPo" style="padding: 3px 0px 0px 0px; height:auto">
+			<div class="row-fluid">
+				<div class="span6 pull-left">
+				  <table border="0"  cellpadding="3" cellspacing="3">
+                                                            <tr>
+                                                                <td> 
+                                                                    <div class="input-prepend">
+                                                                            <span class="add-on">From</span>
+                                                                            <input type="text" id="SearchDateFrom" class="input-small date" placeholder="DD-MMM-YYYY" />
+                                                                    </div>
+                                                                </td>
+                                                                
+                                                                <td> 
+                                                                    <div class="input-prepend">
+                                                                            <span class="add-on">PO Date</span>
+                                                                            <input type="text" id="SearchDateTo" class="input-small date" placeholder="DD-MMM-YYYY" />
+                                                                   
+                                                                    </div>
+                                                                </td>
+                                                                
+                                                                <td valign="middle"> 
+                                                                    
+                                                                           <a href="javascript:void(0)" class="btn btn-default" style="margin-top:-10px;" ng-click="filterDate()">Filter&nbsp;<i class="icon-search"></i></a> 
+                                                                    
+                                                                </td>
+                                                                 
+                                                            </tr>
+                                    </table>
+				</div>
+                            
+                            
+                                <div class="span6 pull-right">
+				  <table border="0"  cellpadding="3" cellspacing="3">
+                                                            <tr>
+                                                                
+                                                                
+                                                                <td> 
+                                                                    <div class="input-prepend">
+                                                                            <span class="add-on">Search</span>
+                                                                            <input type="text" id="query" class="input-medium" placeholder="EWO/PO/Site Link/Name" ng-model="searchText" />
+                                                                    </div>
+                                                                </td>
+                                                                 
+                                                                <td> 
+                                                                    <div class="input-prepend">
+                                                                    <span class="add-on">Status</span>
+                                                                    <select name="filter_fsp" id="fsp" ng-model="searchStatus" >
+                                                                    <option value="">--Pilih--</option>
+                                                                            <option value="not_yet">Not Yet</option>
+                                                                            <option value="pass">Pass</option>
+                                                                            <option value="reject">Reject</option>
+                                                                    </select> 
+                                                                    </div>
+                                                                </td>
+                                                                 
+                                                                <td valign="top"> <button class="btn" ng-click="search()" >Search</button> </td>
+                                                                <td> <div style="margin-top:-10px;"> <button type="button" id="refresh" class="btn btn-default" > Refresh </button></div>  </td>
+                                                            </tr>
+                                    </table>
+				</div>
+				 		
+			</div>
+		</div>		
+		<table class="jgrid" id="gridApproval"></table>
+	</div>
+</div>
+
+<script type="text/javascript"> 
+
+   $("#refresh").click(function(){
+  window.location.href = "<?php echo base_url('my_todolist');?>";
+});
+</script>

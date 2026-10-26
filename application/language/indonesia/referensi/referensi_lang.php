@@ -1,0 +1,30 @@
+<?php
+
+$lang['text_heading_title_wilayah_list']		= 'List Wilayah';
+$lang['text_heading_title_propinsi_list']		= 'List Propinsi';
+$lang['text_heading_title_kabupaten_list']		= 'List Kabupaten/Kota';
+$lang['text_heading_title_kecamatan_list']		= 'List Kecamatan';
+$lang['text_heading_title_site_type_list']		= 'Site Type';
+$lang['text_heading_title_map']					= 'GIS Map';
+$lang['text_heading_title_edit_user']			= 'Edit User';
+$lang['text_heading_gis_map']					= 'GIS Map';
+$lang['text_heading_title_tp_kandidat_list']	= 'Kandidat Site';
+$lang['text_heading_title_wilayah_list']						= 'List Wilayah';
+$lang['text_heading_title_propinsi_list']						= 'List Propinsi';
+$lang['text_heading_title_kabupaten_list']						= 'List Kabupaten/Kota';
+$lang['text_heading_title_kecamatan_list']						= 'List Kecamatan';
+$lang['text_heading_title_site_type_list']						= 'Site Type';
+$lang['text_heading_title_status_tp_list']						= 'Status TP';
+$lang['text_heading_title_shelter_type_list']					= 'Shelter Type';
+$lang['text_heading_title_site_specification_list']				= 'Site Specification';
+$lang['text_heading_title_tipe_perangkat_site_list']			= 'Tipe Perangkat Site';
+$lang['text_heading_title_region_list']							= 'Region';
+$lang['text_heading_title_site_tp_kandidat_list']				= 'Site TP Kandidat';
+$lang['text_heading_title_tipe_perangkat_ceklis_group_list']	= 'Tipe Perangkat Ceklis Group';
+$lang['text_heading_title_perangkat_site_ceklis_list']			= 'Perangkat Site Ceklis';
+$lang['text_heading_title_partner_list']						= 'Partner';
+$lang['text_heading_title_pm_checklist_list']					= 'PM Checklist';
+$lang['text_heading_title_pm_checklist_property_option_list']	= 'PM Checklist Property Option';
+$lang['text_heading_title_map']									= 'GIS Map';
+$lang['text_heading_title_edit_user']							= 'Edit User';
+$lang['text_heading_gis_map']									= 'GIS Map';

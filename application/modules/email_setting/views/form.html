@@ -1,0 +1,113 @@
+<div class="widget">
+	<div class="widget-head heading-outer">
+		<h4 class="heading glyphicons list"><i></i> {{ title }}</h4>
+	</div>
+	
+	<div class="widget-body">
+		<form class="form-horizontal" ng-submit="save()">
+			<div class="row-fluid">	
+				<div class="span12">
+					<div class="control-group">
+						<label class="control-label" for="dinNO">Template Name</label>
+						<div class="controls">
+							<input type="text" id="din_no" class="form-control" ng-model="dataApproval.template_name" />
+						</div>
+						<div class="separator bottom"></div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="row-fluid">
+				<div class="span12">
+					<div class="control-group">
+						<label class="control-label" for="userId">User</label>
+						<div class="controls">
+							<div class="input-append">
+							<input type="text" name="user" value="" id="user"  ng-model="dataApproval.user_name" class="input-medium uneditable" onfocus="lookUpUser()">						
+<input type="hidden" id="input_user_id" ng-model="dataApproval.user_id"  value="">
+						<button type="button" class="btn" onclick="lookUpUser()">...</button>
+											</div>
+							
+						</div>
+						<div class="separator bottom"></div>
+					</div>
+				</div>
+			</div>		
+			
+			<div class="row-fluid">	
+				<div class="span12">
+					<div class="control-group">
+						<label class="control-label" for="is_mandatory">Is Mandatory</label>
+						<div class="controls">
+							<input type="checkbox" id="is_mandatory" ng-model="dataApproval.is_mandatory"/> Yes
+						</div>
+						<div class="separator bottom"></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row-fluid">	
+				<div class="span12">
+					<div class="control-group">
+						<label class="control-label" for="is_mandatory">Order No</label>
+						<div class="controls">
+							<input type="number" id="order_no" ng-model="dataApproval.order_no" />
+						</div>
+						<div class="separator bottom"></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row-fluid">	
+				<div class="span12">
+					<div class="control-group">
+						<label class="control-label" for="remark">Remark</label>
+						<div class="controls">
+							<textarea id="remark" class="input" ng-model="dataApproval.remark"></textarea>
+						</div>
+						<div class="separator bottom"></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="form-actions">
+				<button class="btn btn-primary btn-icon glyphicons circle_ok"><i></i> Save</button>
+				<button type="button" class="btn btn-icon btn-close btn-default glyphicons circle_remove" onclick="window.location.href='#/'"><i></i>Cancel</button>
+			</div>
+		</form>
+	</div>
+</div>
+<script>
+	/*Function to Show User List*/
+	function lookUpUser(){
+		 var url = "<?php echo site_url('/approval/lookup_user') ?>";
+
+			$.fancybox({
+				href: url,
+				type: 'ajax',
+				ajax: { data: { cmd: 'getData' } }, // e: it used for selected element
+				width: 600,
+				scrolling: false,
+				autoSize: true,
+				fitToView: true,
+				closeClick: false,
+				openEffect: 'fade',
+				closeEffect: 'fade',
+				afterShow: function() {
+		                    $('.fancybox-wrap').draggable({handle:".widget-head"});
+		                    
+					document.getElementById('btnDataSelectedOK').onclick = function() {
+                        var row = $('#gridUserApproval').datagrid('getSelected');
+
+                        if (row != null) {
+                        	console.log("User Id :"+row.user_id);   
+                        	$('#user').val(row.user_name);
+                        	$('#input_user_id').val(row.user_id);
+                        }
+                        
+                        $.fancybox.close();
+                    };
+				}
+			});
+	}	
+</script>
